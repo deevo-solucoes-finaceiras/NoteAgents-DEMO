@@ -1,0 +1,6 @@
+{
+  "name": "NoteAgents - AI Engineering Control Plane",
+  "description": "Engenharia de software assistida por IA. Do planejamento à produção com inteligência, evidência e automação.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
