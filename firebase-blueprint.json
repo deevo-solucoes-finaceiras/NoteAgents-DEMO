@@ -1,0 +1,87 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile in NoteAgents",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "maxLength": 128 },
+        "name": { "type": "string", "maxLength": 100 },
+        "email": { "type": "string", "format": "email", "maxLength": 200 },
+        "role": { "type": "string", "maxLength": 50 },
+        "organization": { "type": "string", "maxLength": 100 },
+        "avatarUrl": { "type": "string", "maxLength": 500 },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["uid", "email", "name"]
+    },
+    "Project": {
+      "title": "Project",
+      "description": "Software engineering project supervised by AI agents",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "name": { "type": "string", "maxLength": 100 },
+        "slug": { "type": "string", "maxLength": 100 },
+        "description": { "type": "string", "maxLength": 500 },
+        "category": { "type": "string", "maxLength": 50 },
+        "status": { "type": "string", "enum": ["em_andamento", "planejamento", "validacao", "concluido"] },
+        "stack": { "type": "array" },
+        "health": { "type": "number" },
+        "openIssuesCount": { "type": "number" },
+        "ownerId": { "type": "string", "maxLength": 128 },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "name", "status", "health"]
+    },
+    "Agent": {
+      "title": "Agent",
+      "description": "Specialized AI engineering agent",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "name": { "type": "string", "maxLength": 100 },
+        "slug": { "type": "string", "maxLength": 100 },
+        "description": { "type": "string", "maxLength": 500 },
+        "category": { "type": "string", "maxLength": 50 },
+        "status": { "type": "string", "enum": ["ativo", "pausado", "executando", "bloqueado", "erro"] },
+        "autonomyLevel": { "type": "number" },
+        "model": { "type": "string", "maxLength": 50 },
+        "runsCount": { "type": "number" }
+      },
+      "required": ["id", "name", "status", "autonomyLevel"]
+    },
+    "Audit": {
+      "title": "Audit",
+      "description": "System production readiness and code audit",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "title": { "type": "string", "maxLength": 200 },
+        "score": { "type": "number" },
+        "status": { "type": "string", "maxLength": 50 },
+        "date": { "type": "string", "maxLength": 50 }
+      },
+      "required": ["id", "title", "score"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profiles"
+    },
+    "/projects/{projectId}": {
+      "schema": "Project",
+      "description": "Workspaces and engineering projects"
+    },
+    "/agents/{agentId}": {
+      "schema": "Agent",
+      "description": "AI agent catalogue"
+    },
+    "/audits/{auditId}": {
+      "schema": "Audit",
+      "description": "Audit records and findings"
+    }
+  }
+}

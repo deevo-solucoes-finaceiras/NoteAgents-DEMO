@@ -1,0 +1,13 @@
+{
+  "ev-1791196414658": {
+    "id": "ev-1791196414658",
+    "projectId": "proj-1",
+    "projectName": "ViaPay Core",
+    "type": "Auditoria Automatizada",
+    "hashSha256": "562acc6cb8b4c87d7687b73abcda311ce5d57127a7a113b7c3b09b35b501baaf",
+    "verifiedBy": "Security Agent",
+    "createdAt": "2026-10-05T10:33:34.658Z",
+    "status": "valido",
+    "summary": "Auditoria de código e segurança finalizada com score 94/100."
+  }
+}

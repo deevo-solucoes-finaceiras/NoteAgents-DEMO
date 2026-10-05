@@ -1,0 +1,86 @@
+{
+  "proj-1": {
+    "id": "proj-1",
+    "name": "ViaPay Core",
+    "slug": "viapay-core",
+    "description": "SaaS financeiro corporativo com gateway multi-adquirente, tokenização PCI-DSS e liquidação instantânea.",
+    "category": "Fintech",
+    "status": "em_andamento",
+    "stack": [
+      "TypeScript",
+      "Next.js",
+      "Express",
+      "PostgreSQL",
+      "Docker",
+      "Tailwind CSS"
+    ],
+    "health": 96,
+    "lastAuditScore": 92,
+    "lastRunDate": "2026-10-05T10:33:27.224Z",
+    "openIssuesCount": 2,
+    "updatedAt": "2026-10-05T10:33:27.225Z",
+    "repoUrl": "https://github.com/noteagents/viapay-core.git",
+    "workspacePath": "/workspaces/viapay-core"
+  },
+  "proj-2": {
+    "id": "proj-2",
+    "name": "E-commerce Headless",
+    "slug": "ecommerce-headless",
+    "description": "Plataforma de alta conversão com checkout transparente e integração com ERPs e operadoras logísticas.",
+    "category": "E-commerce",
+    "status": "em_andamento",
+    "stack": [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Redis",
+      "Tailwind CSS"
+    ],
+    "health": 91,
+    "lastAuditScore": 88,
+    "lastRunDate": "2026-10-05T10:33:27.225Z",
+    "openIssuesCount": 4,
+    "updatedAt": "2026-10-05T10:33:27.225Z",
+    "repoUrl": "https://github.com/noteagents/ecommerce-headless.git",
+    "workspacePath": "/workspaces/ecommerce-headless"
+  },
+  "proj-3": {
+    "id": "proj-3",
+    "name": "App Mobile Flutter",
+    "slug": "app-mobile-flutter",
+    "description": "Carteira digital para iOS e Android com autenticação biométrica e pagamentos instantâneos via Pix e QR Code.",
+    "category": "Mobile",
+    "status": "planejamento",
+    "stack": [
+      "Flutter",
+      "Dart",
+      "Firebase",
+      "SQLite"
+    ],
+    "health": 84,
+    "lastAuditScore": 79,
+    "lastRunDate": "2026-10-05T10:33:27.225Z",
+    "openIssuesCount": 1,
+    "updatedAt": "2026-10-05T10:33:27.225Z",
+    "workspacePath": "/workspaces/app-mobile-flutter"
+  },
+  "proj-4": {
+    "id": "proj-4",
+    "name": "Site Institucional",
+    "slug": "site-institucional",
+    "description": "Portal corporativo com blog, área de carreiras, central de ajuda e documentação de API para desenvolvedores.",
+    "category": "Web",
+    "status": "concluido",
+    "stack": [
+      "Astro",
+      "TypeScript",
+      "Tailwind CSS"
+    ],
+    "health": 99,
+    "lastAuditScore": 98,
+    "lastRunDate": "2026-10-05T10:33:27.225Z",
+    "openIssuesCount": 0,
+    "updatedAt": "2026-10-05T10:33:27.225Z",
+    "workspacePath": "/workspaces/site-institucional"
+  }
+}

@@ -15,6 +15,7 @@ import {
 import { useAppStore } from "../../stores/useAppStore";
 import { ProjectSelector } from "./ProjectSelector";
 import { cn } from "../../lib/utils";
+import { auth, signOut } from "../../lib/firebase";
 
 export function Header() {
   const {
@@ -237,12 +238,17 @@ export function Header() {
 
                 <div className="pt-1 border-t border-slate-100">
                   <button
-                    onClick={() => {
+                    onClick={async () => {
                       setIsUserMenuOpen(false);
+                      try {
+                        await signOut(auth);
+                      } catch (err) {
+                        console.warn("SignOut error", err);
+                      }
                       setCurrentPath("/login");
-                      addToast("Sessão finalizada com segurança.", "info");
+                      addToast("Sessão finalizada com sucesso.", "info");
                     }}
-                    className="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-rose-600 hover:bg-rose-50 transition-colors text-left"
+                    className="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-rose-600 hover:bg-rose-50 transition-colors text-left cursor-pointer"
                   >
                     <LogOut className="w-3.5 h-3.5 text-rose-500" />
                     Sair da Conta

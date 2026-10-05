@@ -1,0 +1,38 @@
+{
+  "pipe-1": {
+    "status": "concluido",
+    "lastRunDate": "Agora mesmo",
+    "steps": [
+      {
+        "id": "s1",
+        "name": "Checkout & Setup Node.js",
+        "status": "concluido",
+        "duration": "4s"
+      },
+      {
+        "id": "s2",
+        "name": "Lint & Formatação (tsc + eslint)",
+        "status": "concluido",
+        "duration": "4s"
+      },
+      {
+        "id": "s3",
+        "name": "Testes Unitários (Vitest)",
+        "status": "concluido",
+        "duration": "4s"
+      },
+      {
+        "id": "s4",
+        "name": "Auditoria de Vulnerabilidades (OWASP)",
+        "status": "concluido",
+        "duration": "4s"
+      },
+      {
+        "id": "s5",
+        "name": "Assinatura Criptográfica da Evidência",
+        "status": "concluido",
+        "duration": "4s"
+      }
+    ]
+  }
+}

@@ -17,16 +17,18 @@ export type BadgeVariant =
   | "baixo";
 
 interface StatusBadgeProps {
-  variant: BadgeVariant | string;
+  variant?: BadgeVariant | string;
+  status?: BadgeVariant | string;
   label?: string;
   className?: string;
 }
 
-export function StatusBadge({ variant, label, className }: StatusBadgeProps) {
+export function StatusBadge({ variant, status, label, className }: StatusBadgeProps) {
+  const badgeType = status || variant || "em_andamento";
   let text = label;
   let styleClasses = "bg-slate-100 text-slate-700 border-slate-200";
 
-  switch (variant) {
+  switch (badgeType) {
     case "em_andamento":
       text = text || "Em andamento";
       styleClasses = "bg-blue-50 text-blue-700 border-blue-200";

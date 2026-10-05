@@ -49,6 +49,8 @@ interface AppState {
   // User Profile
   user: UserProfile;
   setUser: (user: UserProfile) => void;
+  firebaseUid?: string | null;
+  setFirebaseUid: (uid: string | null) => void;
 }
 
 const DEFAULT_NOTIFICATIONS: AppNotification[] = [
@@ -164,5 +166,7 @@ export const useAppStore = create<AppState>((set, get) => {
       language: "Português (Brasil)",
     },
     setUser: (user) => set({ user }),
+    firebaseUid: null,
+    setFirebaseUid: (uid) => set({ firebaseUid: uid }),
   };
 });

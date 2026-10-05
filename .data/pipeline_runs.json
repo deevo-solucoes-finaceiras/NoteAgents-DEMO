@@ -1,0 +1,42 @@
+{
+  "run-1791196417440": {
+    "id": "run-1791196417440",
+    "pipelineId": "pipe-1",
+    "name": "Auditoria & Qualidade Contínua",
+    "status": "concluido",
+    "triggeredAt": "2026-10-05T10:33:37.440Z",
+    "durationMs": 38000,
+    "steps": [
+      {
+        "id": "s1",
+        "name": "Checkout & Setup Node.js",
+        "status": "concluido",
+        "duration": "4s"
+      },
+      {
+        "id": "s2",
+        "name": "Lint & Formatação (tsc + eslint)",
+        "status": "concluido",
+        "duration": "4s"
+      },
+      {
+        "id": "s3",
+        "name": "Testes Unitários (Vitest)",
+        "status": "concluido",
+        "duration": "4s"
+      },
+      {
+        "id": "s4",
+        "name": "Auditoria de Vulnerabilidades (OWASP)",
+        "status": "concluido",
+        "duration": "4s"
+      },
+      {
+        "id": "s5",
+        "name": "Assinatura Criptográfica da Evidência",
+        "status": "concluido",
+        "duration": "4s"
+      }
+    ]
+  }
+}

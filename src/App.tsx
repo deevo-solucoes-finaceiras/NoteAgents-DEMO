@@ -20,9 +20,37 @@ import { LoginView } from "./components/pages/LoginView";
 import { EvidenceView } from "./components/pages/EvidenceView";
 import { ReadinessView } from "./components/pages/ReadinessView";
 import { ObserverView, WorkspaceView } from "./components/pages/ObserverView";
+import { auth, testFirestoreConnection } from "./lib/firebase";
+import { onAuthStateChanged } from "firebase/auth";
 
 export default function App() {
-  const { currentPath, setCurrentPath } = useAppStore();
+  const { currentPath, setCurrentPath, setUser, setFirebaseUid } = useAppStore();
+
+  // Test connection on mount
+  useEffect(() => {
+    testFirestoreConnection();
+  }, []);
+
+  // Listen to Firebase Auth state
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
+      if (firebaseUser) {
+        setFirebaseUid(firebaseUser.uid);
+        setUser({
+          name: firebaseUser.displayName || "Usuário Firebase",
+          email: firebaseUser.email || "user@noteagents.dev",
+          role: "Administrador",
+          organization: "NoteAgents Cloud",
+          avatarUrl: firebaseUser.photoURL || undefined,
+          timezone: "America/Sao_Paulo",
+          language: "Português (Brasil)",
+        });
+      } else {
+        setFirebaseUid(null);
+      }
+    });
+    return () => unsubscribe();
+  }, [setUser, setFirebaseUid]);
 
   // Listen to browser popstate for history navigation
   useEffect(() => {

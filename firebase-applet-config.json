@@ -1,0 +1,10 @@
+{
+  "projectId": "noteagents",
+  "appId": "1:931002012098:web:3bb0cf7e6908e403e2865b",
+  "apiKey": "AIzaSyAh-C4eR9C4G2MWSNY_-cnPbZykJ3evYc4",
+  "authDomain": "noteagents.firebaseapp.com",
+  "storageBucket": "noteagents.firebasestorage.app",
+  "messagingSenderId": "931002012098",
+  "measurementId": "G-CX16T601E6",
+  "firestoreDatabaseId": "(default)"
+}

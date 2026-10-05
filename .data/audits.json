@@ -1,0 +1,27 @@
+{
+  "audit-1791196414619": {
+    "id": "audit-1791196414619",
+    "projectId": "proj-1",
+    "projectName": "ViaPay Core",
+    "overallScore": 94,
+    "securityScore": 96,
+    "performanceScore": 92,
+    "architectureScore": 95,
+    "accessibilityScore": 93,
+    "status": "concluido",
+    "auditedAt": "2026-10-05T10:33:34.619Z",
+    "auditedBy": "Security Agent (NVIDIA Nemotron 3 Ultra)",
+    "findingsCount": 1,
+    "findings": [
+      {
+        "id": "f-1791196414619",
+        "title": "Verificação de Dependências e Pacotes Auditada",
+        "severity": "baixo",
+        "category": "Segurança",
+        "description": "Todas as dependências do projeto foram validadas e nenhuma vulnerabilidade crítica foi detectada.",
+        "remediation": "Manter atualização periódica com npm audit.",
+        "status": "open"
+      }
+    ]
+  }
+}
